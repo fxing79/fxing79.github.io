@@ -18,7 +18,7 @@ html {
 body {
   background: #fff;
   /*font: 1em "Garamond","Baskerville",  "Palatino", "Times", "Nanum gothic", "Nanum myungjo", "Malgun gothic", serif;*/
-  font: 1em  "PFDinTextUniversal", "Arial", sans-serif;
+  font: 1em  "Public Sans", "Arial", sans-serif;
   line-height: 1.55em; }
   @media only screen and (max-width: 40em) {
     body {
@@ -56,14 +56,14 @@ a {
 h1.blog {
   margin: 0em 0;
   line-height: 1.4em;
-  font-size: 2.0em;
+  font-size: 2.5 em;
   font-weight: normal;
 }
 
 h1 {
   margin-top: 2em 0;
   line-height: 1.5em;
-  font-size: 1.5em;
+  font-size: 1.9 em;
   font-weight: normal; }
   @media only screen and (max-width: 40em) {
     h1 {
@@ -99,15 +99,30 @@ li {
   li p {
     display: inline; }
 
+
+
+img {
+-webkit-border-radius: 5%;
+-moz-border-radius: 5%;
+border-radius: 5%;
+}
+
 img.profilepic {
-  width: 200px; }
+  width: 200px; 
+  border: none;
+  -webkit-border-radius: 20%;
+  -moz-border-radius: 20%;
+  border-radius: 20%;
+  margin-bottom: 1rem
+
+}
   @media only screen and (max-width: 40em) {
     img.profilepic {
       display: block;
       margin: auto; } }
   @media only screen and (min-width: 30.001em) {
     img.profilepic {
-      float: left;
+      float: right;
       margin-right: 2em;
       margin-left: 0em; } }
 
@@ -118,6 +133,35 @@ img.feedicon {
 
 .demo_line_05{ letter-spacing: -1px; color: #ddd; } 
 .demo_line_05 span{ letter-spacing: 0; color: #222; margin:0 20px; }
+
+
+.image-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: flex-start;
+      max-width: 800px;
+    }
+
+    .image-grid img {
+      flex: 1 0 20%; /* 4 in a row with spacing */
+      max-width: 20%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 600px) {
+      .image-grid img {
+        flex: 1 0 48%; /* 2 in a row on small screens */
+      }
+    }
+
+    @media (max-width: 400px) {
+      .image-grid img {
+        flex: 1 0 100%; /* 1 per row on extra small screens */
+      }
+    }
 
 /* Structure */
 .header {
@@ -138,7 +182,7 @@ img.feedicon {
   .header ul {
     list-style-type: none;
     margin: 0;
-    padding: 0; }
+    padding: 0;}
     .header ul li {
       padding: 1.5em;
       display: inline-block; }
@@ -400,4 +444,6 @@ table.gridtable td {
   border-color: #666666;
   background-color: #ffffff;
 }
+
+ul.big-indent {padding-left: 3rem; list-style-type:square; list-style-position: inside;}
 
